@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 3,
   },
   bayrak: {
-    color: theme.palette.grey[300],
+    color: '#fff',
     fontFamily: 'Pirata One, sans-serif',
     fontWeight: theme.typography.fontWeightBold,
     letterSpacing: theme.spacing(1),
