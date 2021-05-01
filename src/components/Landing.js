@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     borderRadius: '20px',
-    width: '300px',
+    width: '250px',
     marginRight: theme.spacing(2),
     opacity: '0.8',
     marginBottom: theme.spacing(4),
