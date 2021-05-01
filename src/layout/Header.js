@@ -205,9 +205,9 @@ const Header = () => {
   );
   return (
     <AppBar
-      position='sticky'
+      position='fixed'
       style={{ backgroundColor: 'transparent' }}
-      elevation={1}
+      elevation={0}
     >
       <Toolbar className={classes.toolbar}>
         <div className={classes.left}>
