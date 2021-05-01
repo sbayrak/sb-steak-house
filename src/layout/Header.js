@@ -36,6 +36,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       width: '75px',
     },
+    [theme.breakpoints.down('xs')]: {
+      width: '65px',
+    },
   },
   typos: {
     paddingLeft: theme.spacing(1),
@@ -50,11 +53,18 @@ const useStyles = makeStyles((theme) => ({
   },
   Typo2: {
     letterSpacing: theme.spacing(1),
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '12px',
+      letterSpacing: 5,
+    },
   },
   right: {
     width: '60%',
     [theme.breakpoints.down('sm')]: {
       width: '50%',
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '40%',
     },
   },
   desktopUl: {
@@ -89,17 +99,17 @@ const useStyles = makeStyles((theme) => ({
   menuBtn: {
     color: '#fff',
     float: 'right',
-    marginRight: theme.spacing(4),
+    marginRight: theme.spacing(3),
   },
   drawerUl: {
     listStyle: 'none',
-    padding: theme.spacing(8),
+    padding: theme.spacing(4),
   },
   drawerLi: {
     color: '#fff',
     listStyle: 'none',
-    paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(3),
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
   },
   drawerLiA: {
     color: '#fff',
@@ -138,7 +148,10 @@ const Header = () => {
           GALLERY
         </a>
       </li>
-      <li className={classes.desktopLi}>
+      <li
+        className={classes.desktopLi}
+        style={{ border: '2px solid #ff3c3c', borderRadius: '5px' }}
+      >
         <a href='#!' className={classes.desktopLiA}>
           RESERVATION
         </a>
