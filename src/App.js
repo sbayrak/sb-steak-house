@@ -15,6 +15,7 @@ function App() {
       <Welcomer></Welcomer>
       <Ornament></Ornament>
       <MenuSection></MenuSection>
+      <Ornament></Ornament>
     </Fragment>
   );
 }
