@@ -30,6 +30,7 @@ function TabPanel(props) {
       id={`scrollable-auto-tabpanel-${index}`}
       aria-labelledby={`scrollable-auto-tab-${index}`}
       {...other}
+      style={{ border: '1px solid red', width: '100%' }}
     >
       {value === index && (
         <Box p={3}>
@@ -97,6 +98,30 @@ const useStyles = makeStyles((theme) => ({
   appbar: {
     border: '1px solid yellow',
     background: 'transparent',
+  },
+  tabPanelContainer: {
+    border: '1px solid purple',
+  },
+  tabPanelItem: {
+    border: '1px solid yellow',
+    padding: theme.spacing(1),
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+  },
+  tabPanelItemTop: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+  tabPanelTypo1: {
+    color: '#ff3c3c',
+    fontFamily: 'Pirata One',
+    letterSpacing: 3,
+  },
+  tabPanelTypo2: {
+    color: '#ff3c3c',
+  },
+  tabPanelTypo3: {
+    color: '#fff',
   },
 }));
 
@@ -173,7 +198,161 @@ export default function ScrollableTabsButtonAuto() {
               </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
-              Item One
+              <Grid container className={classes.tabPanelContainer} spacing={4}>
+                <Grid
+                  container
+                  item
+                  md={6}
+                  style={{ borderRight: '1px solid #ff3c3c' }}
+                >
+                  <Grid item md={12} className={classes.tabPanelItem}>
+                    <Box component='div' className={classes.tabPanelItemTop}>
+                      <Typography
+                        variant='h5'
+                        className={classes.tabPanelTypo1}
+                      >
+                        Egg Benedict
+                      </Typography>
+                      <Typography
+                        variant='h6'
+                        className={classes.tabPanelTypo2}
+                      >
+                        $10
+                      </Typography>
+                    </Box>
+                    <Typography
+                      variant='body2'
+                      gutterBottom
+                      paragraph
+                      className={classes.tabPanelTypo3}
+                    >
+                      English muffin, beef, hollandaise sauce, poached egg.
+                    </Typography>
+                  </Grid>
+                  <Grid item md={12} className={classes.tabPanelItem}>
+                    <Box component='div' className={classes.tabPanelItemTop}>
+                      <Typography
+                        variant='h5'
+                        className={classes.tabPanelTypo1}
+                      >
+                        Texas Benedict
+                      </Typography>
+                      <Typography
+                        variant='h6'
+                        className={classes.tabPanelTypo2}
+                      >
+                        $20
+                      </Typography>
+                    </Box>
+                    <Typography
+                      variant='body2'
+                      gutterBottom
+                      paragraph
+                      className={classes.tabPanelTypo3}
+                    >
+                      English muffin, short ribs, bbq sauce, poached egg.
+                    </Typography>
+                  </Grid>
+                  <Grid item md={12} className={classes.tabPanelItem}>
+                    <Box component='div' className={classes.tabPanelItemTop}>
+                      <Typography
+                        variant='h5'
+                        className={classes.tabPanelTypo1}
+                      >
+                        Rusty’s Omlette
+                      </Typography>
+                      <Typography
+                        variant='h6'
+                        className={classes.tabPanelTypo2}
+                      >
+                        $30
+                      </Typography>
+                    </Box>
+                    <Typography
+                      variant='body2'
+                      gutterBottom
+                      paragraph
+                      className={classes.tabPanelTypo3}
+                    >
+                      Mozzarella, cheddar, caramelized onion, black beans.
+                    </Typography>
+                  </Grid>
+                </Grid>
+                <Grid container item md={6}>
+                  <Grid item md={12} className={classes.tabPanelItem}>
+                    <Box component='div' className={classes.tabPanelItemTop}>
+                      <Typography
+                        variant='h5'
+                        className={classes.tabPanelTypo1}
+                      >
+                        Salmon Bagel
+                      </Typography>
+                      <Typography
+                        variant='h6'
+                        className={classes.tabPanelTypo2}
+                      >
+                        $40
+                      </Typography>
+                    </Box>
+                    <Typography
+                      variant='body2'
+                      gutterBottom
+                      paragraph
+                      className={classes.tabPanelTypo3}
+                    >
+                      Smoked salmon, cream cheese, dill, rocket, red onion.
+                    </Typography>
+                  </Grid>
+                  <Grid item md={12} className={classes.tabPanelItem}>
+                    <Box component='div' className={classes.tabPanelItemTop}>
+                      <Typography
+                        variant='h5'
+                        className={classes.tabPanelTypo1}
+                      >
+                        Breakfast Bagel
+                      </Typography>
+                      <Typography
+                        variant='h6'
+                        className={classes.tabPanelTypo2}
+                      >
+                        $50
+                      </Typography>
+                    </Box>
+                    <Typography
+                      variant='body2'
+                      gutterBottom
+                      paragraph
+                      className={classes.tabPanelTypo3}
+                    >
+                      Chocolate, marshmallow, biscuit bar.
+                    </Typography>
+                  </Grid>
+                  <Grid item md={12} className={classes.tabPanelItem}>
+                    <Box component='div' className={classes.tabPanelItemTop}>
+                      <Typography
+                        variant='h5'
+                        className={classes.tabPanelTypo1}
+                      >
+                        Rusty’s Pancake
+                      </Typography>
+                      <Typography
+                        variant='h6'
+                        className={classes.tabPanelTypo2}
+                      >
+                        $60
+                      </Typography>
+                    </Box>
+                    <Typography
+                      variant='body2'
+                      gutterBottom
+                      paragraph
+                      className={classes.tabPanelTypo3}
+                    >
+                      Strawberry, white chocolate, dark chocolate, crispearls.
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Grid>
             </TabPanel>
             <TabPanel value={value} index={1}>
               Item Two
