@@ -8,6 +8,18 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { Container, Grid } from '@material-ui/core';
 
+/* ICONS */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faIceCream } from '@fortawesome/free-solid-svg-icons';
+import { faHourglass } from '@fortawesome/free-solid-svg-icons';
+import { faDrumstickBite } from '@fortawesome/free-solid-svg-icons';
+import { faCarrot } from '@fortawesome/free-solid-svg-icons';
+import { faBreadSlice } from '@fortawesome/free-solid-svg-icons';
+import { faHamburger } from '@fortawesome/free-solid-svg-icons';
+import { faTint } from '@fortawesome/free-solid-svg-icons';
+/* ICONS */
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -47,18 +59,16 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(5),
   },
   gridContainer: {
-    border: '1px solid green',
+    border: '1px solid blue',
     padding: theme.spacing(2),
   },
   gridTop: {
-    border: '1px solid yellow',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     padding: theme.spacing(2),
   },
   Typo1: {
-    border: '1px solid blue',
     padding: theme.spacing(2),
     borderBottom: `1px solid #ff3c3c`,
     color: theme.palette.grey[300],
@@ -67,6 +77,26 @@ const useStyles = makeStyles((theme) => ({
   },
   typoSpan: {
     color: '#ff3c3c',
+  },
+  gridItem: {},
+  gridBottom: {
+    border: '1px solid green',
+    padding: theme.spacing(5),
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  wrapper: {
+    width: '65%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    border: '1px solid red',
+  },
+  appbar: {
+    border: '1px solid yellow',
+    background: 'transparent',
   },
 }));
 
@@ -86,59 +116,87 @@ export default function ScrollableTabsButtonAuto() {
             Our <span className={classes.typoSpan}>Menu</span>
           </Typography>
         </Grid>
-        <Grid item md={12} className={`${classes.gridItem}`}>
-          <AppBar position='static' color='default'>
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              indicatorColor='primary'
-              textColor='primary'
-              variant='scrollable'
-              scrollButtons='auto'
-              aria-label='scrollable auto tabs example'
-            >
-              <Tab label='Item One' {...a11yProps(0)} />
-              <Tab label='Item Two' {...a11yProps(1)} />
-              <Tab label='Item Three' {...a11yProps(2)} />
-              <Tab label='Item Four' {...a11yProps(3)} />
-              <Tab label='Item Five' {...a11yProps(4)} />
-              <Tab label='Item Six' {...a11yProps(5)} />
-              <Tab label='Item Seven' {...a11yProps(6)} />
-              <Tab label='Item Eight' {...a11yProps(7)} />
-              <Tab label='Item Nine' {...a11yProps(8)} />
-              <Tab label='Item Ten' {...a11yProps(9)} />
-            </Tabs>
-          </AppBar>
-          <TabPanel value={value} index={0}>
-            Item One
-          </TabPanel>
-          <TabPanel value={value} index={1}>
-            Item Two
-          </TabPanel>
-          <TabPanel value={value} index={2}>
-            Item Three
-          </TabPanel>
-          <TabPanel value={value} index={3}>
-            Item Four
-          </TabPanel>
-          <TabPanel value={value} index={4}>
-            Item Five
-          </TabPanel>
-          <TabPanel value={value} index={5}>
-            Item Six
-          </TabPanel>
-          <TabPanel value={value} index={6}>
-            Item Seven
-          </TabPanel>
-          <TabPanel value={value} index={7}>
-            Item Eight
-          </TabPanel>
-          <TabPanel value={value} index={8}>
-            Item Nine
-          </TabPanel>
-          <TabPanel value={value} index={9}>
-            Item Ten
-          </TabPanel>
+        <Grid
+          item
+          md={12}
+          className={`${classes.gridItem} ${classes.gridBottom}`}
+        >
+          <div className={classes.wrapper}>
+            <AppBar position='static' className={classes.appbar}>
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                variant='scrollable'
+                scrollButtons='on'
+                aria-label='scrollable auto tabs example'
+              >
+                <Tab
+                  label='Breakfast'
+                  icon={<FontAwesomeIcon icon={faCoffee} size='lg' />}
+                  {...a11yProps(0)}
+                />
+                <Tab
+                  label='Dessert'
+                  icon={<FontAwesomeIcon icon={faIceCream} size='lg' />}
+                  {...a11yProps(1)}
+                />
+                <Tab
+                  label='Starters'
+                  icon={<FontAwesomeIcon icon={faHourglass} size='lg' />}
+                  {...a11yProps(2)}
+                />
+                <Tab
+                  label='Steaks'
+                  icon={<FontAwesomeIcon icon={faDrumstickBite} size='lg' />}
+                  {...a11yProps(3)}
+                />
+                <Tab
+                  label='Salads'
+                  icon={<FontAwesomeIcon icon={faCarrot} size='lg' />}
+                  {...a11yProps(4)}
+                />
+                <Tab
+                  label='Appetizers'
+                  icon={<FontAwesomeIcon icon={faBreadSlice} size='lg' />}
+                  {...a11yProps(5)}
+                />
+                <Tab
+                  label='Burgers'
+                  icon={<FontAwesomeIcon icon={faHamburger} size='lg' />}
+                  {...a11yProps(6)}
+                />
+                <Tab
+                  label='Drinks'
+                  icon={<FontAwesomeIcon icon={faTint} size='lg' />}
+                  {...a11yProps(7)}
+                />
+              </Tabs>
+            </AppBar>
+            <TabPanel value={value} index={0}>
+              Item One
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+              Item Two
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+              Item Three
+            </TabPanel>
+            <TabPanel value={value} index={3}>
+              Item Four
+            </TabPanel>
+            <TabPanel value={value} index={4}>
+              Item Five
+            </TabPanel>
+            <TabPanel value={value} index={5}>
+              Item Six
+            </TabPanel>
+            <TabPanel value={value} index={6}>
+              Item Seven
+            </TabPanel>
+            <TabPanel value={value} index={7}>
+              Item Eight
+            </TabPanel>
+          </div>
         </Grid>
       </Grid>
     </Container>
