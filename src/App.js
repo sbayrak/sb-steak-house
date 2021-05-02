@@ -4,6 +4,7 @@ import './App.css';
 import Landing from './components/Landing';
 import Welcomer from './components/Welcomer';
 import Ornament from './layout/Ornament';
+import MenuSection from './components/MenuSection';
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <Landing></Landing>
       <Ornament></Ornament>
       <Welcomer></Welcomer>
+      <Ornament></Ornament>
+      <MenuSection></MenuSection>
     </Fragment>
   );
 }
