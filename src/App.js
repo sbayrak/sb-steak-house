@@ -6,6 +6,7 @@ import Welcomer from './components/Welcomer';
 import Ornament from './layout/Ornament';
 import MenuSection from './components/MenuSection';
 import Reviews from './components/Reviews';
+import Information from './components/Information';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <MenuSection></MenuSection>
       <Ornament></Ornament>
       <Reviews></Reviews>
+      <Ornament></Ornament>
+      <Information></Information>
       <Ornament></Ornament>
     </Fragment>
   );
