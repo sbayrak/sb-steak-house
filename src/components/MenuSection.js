@@ -124,7 +124,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   wrapper: {
-    width: '65%',
+    width: '75%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -140,7 +140,7 @@ const useStyles = makeStyles((theme) => ({
   tabPanelItem: {
     minHeight: '100px',
     overflow: 'hidden',
-    padding: theme.spacing(1),
+    padding: theme.spacing(3),
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
     [theme.breakpoints.down('sm')]: {
@@ -172,6 +172,11 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '12px',
     },
   },
+  tabPanelLeftAndRight: {},
+  tab: {
+    padding: '25px',
+    fontSize: '18px',
+  },
 }));
 
 export default function ScrollableTabsButtonAuto() {
@@ -186,7 +191,7 @@ export default function ScrollableTabsButtonAuto() {
     <Container maxWidth='lg' className={classes.container}>
       <Grid container className={classes.gridContainer}>
         <Grid item md={12} className={`${classes.gridItem} ${classes.gridTop}`}>
-          <Typography variant='h3' className={classes.Typo1} gutterBottom>
+          <Typography variant='h2' className={classes.Typo1} gutterBottom>
             Our <span className={classes.typoSpan}>Menu</span>
           </Typography>
         </Grid>
@@ -207,48 +212,61 @@ export default function ScrollableTabsButtonAuto() {
                 <Tab
                   label='Breakfast'
                   icon={<FontAwesomeIcon icon={faCoffee} size='lg' />}
+                  className={classes.tab}
                   {...a11yProps(0)}
                 />
                 <Tab
                   label='Dessert'
                   icon={<FontAwesomeIcon icon={faIceCream} size='lg' />}
+                  className={classes.tab}
                   {...a11yProps(1)}
                 />
                 <Tab
                   label='Starters'
                   icon={<FontAwesomeIcon icon={faHourglass} size='lg' />}
+                  className={classes.tab}
                   {...a11yProps(2)}
                 />
                 <Tab
                   label='Steaks'
                   icon={<FontAwesomeIcon icon={faDrumstickBite} size='lg' />}
+                  className={classes.tab}
                   {...a11yProps(3)}
                 />
                 <Tab
                   label='Salads'
                   icon={<FontAwesomeIcon icon={faCarrot} size='lg' />}
+                  className={classes.tab}
                   {...a11yProps(4)}
                 />
                 <Tab
                   label='Appetizers'
                   icon={<FontAwesomeIcon icon={faBreadSlice} size='lg' />}
+                  className={classes.tab}
                   {...a11yProps(5)}
                 />
                 <Tab
                   label='Burgers'
                   icon={<FontAwesomeIcon icon={faHamburger} size='lg' />}
+                  className={classes.tab}
                   {...a11yProps(6)}
                 />
                 <Tab
                   label='Drinks'
                   icon={<FontAwesomeIcon icon={faTint} size='lg' />}
+                  className={classes.tab}
                   {...a11yProps(7)}
                 />
               </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
               <Grid container className={classes.tabPanelContainer} spacing={4}>
-                <Grid container item md={6}>
+                <Grid
+                  container
+                  item
+                  md={6}
+                  className={classes.tabPanelLeftAndRight}
+                >
                   {breakfast1.map((item, index) => (
                     <Grid
                       item
@@ -281,7 +299,12 @@ export default function ScrollableTabsButtonAuto() {
                     </Grid>
                   ))}
                 </Grid>
-                <Grid container item md={6}>
+                <Grid
+                  container
+                  item
+                  md={6}
+                  className={classes.tabPanelLeftAndRight}
+                >
                   {breakfast2.map((item, index) => (
                     <Grid
                       item
