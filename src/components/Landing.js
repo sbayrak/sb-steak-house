@@ -107,7 +107,7 @@ function Landing(props) {
   ];
 
   return (
-    <Carousel interval='3500' indicators='true' navButtonsAlwaysVisible='true'>
+    <Carousel interval='4000' indicators='true' navButtonsAlwaysVisible='true'>
       {items.map((item, i) => (
         <Item key={i} item={item} />
       ))}
