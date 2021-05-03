@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Typography } from '@material-ui/core';
+import { Container, Grid, Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -52,6 +52,22 @@ const useStyles = makeStyles((theme) => ({
     objectFit: 'contain',
     width: '100%',
     borderRadius: '5px',
+  },
+  viewMore: {
+    textDecoration: 'none',
+    color: '#fff',
+    padding: theme.spacing(2),
+    paddingRight: theme.spacing(3),
+    paddingLeft: theme.spacing(3),
+    boxShadow: theme.shadows[5],
+    borderRadius: '5px',
+    transition: '0.9s ease',
+    background:
+      'linear-gradient(0deg, rgba(254,69,69,1) 0%, rgba(255,51,51,1) 48%, rgba(255,65,65,1) 100%)',
+    '&:hover': {
+      background:
+        'linear-gradient(0deg, rgba(254,69,69,1) 0%, rgba(254,103,103,1) 48%, rgba(255,65,65,1) 100%)',
+    },
   },
 }));
 
@@ -129,6 +145,11 @@ const Welcomer = () => {
               enim? Accusantium repellendus nemo fugit! Itaque, vitae sequi
               error reiciendis nulla amet maiores ab dignissimos.
             </Typography>
+          </Grid>
+          <Grid item md={12} className={`${classes.leftGridItem}`}>
+            <a href='#!' rel='noreferrer noopener' className={classes.viewMore}>
+              VIEW MORE
+            </a>
           </Grid>
         </Grid>
         <Grid item md={6}>
