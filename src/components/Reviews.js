@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     padding: theme.spacing(2),
-    borderBottom: '1px solid #ff3c3c',
+    borderBottom: '1px solid rgba(255,60,60,0.5)',
     [theme.breakpoints.down('sm')]: {
       border: 'none',
     },
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '10px',
   },
   Typo: {
-    color: theme.palette.grey[300],
+    color: theme.palette.grey[200],
     [theme.breakpoints.down('sm')]: {
       padding: theme.spacing(0),
     },
@@ -85,7 +85,7 @@ export default function Reviews(props) {
 
   return (
     <Box component='div' className={classes.root}>
-      <Carousel>
+      <Carousel indicators={false}>
         {items.map((item, i) => (
           <Item key={i} item={item} />
         ))}
