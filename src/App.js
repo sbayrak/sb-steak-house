@@ -7,6 +7,7 @@ import Ornament from './layout/Ornament';
 import MenuSection from './components/MenuSection';
 import Reviews from './components/Reviews';
 import Information from './components/Information';
+import Footer from './layout/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Ornament></Ornament>
       <Information></Information>
       <Ornament></Ornament>
+      <Footer></Footer>
     </Fragment>
   );
 }
