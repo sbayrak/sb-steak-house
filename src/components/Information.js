@@ -12,7 +12,7 @@ import steak5 from '../images/steak5.png';
 
 const useStyles = makeStyles((theme) => ({
   box: {
-    marginTop: theme.spacing(10),
+    marginTop: theme.spacing(15),
     height: '75vh',
     backgroundImage: `url('${steak5}')`,
     backgroundRepeat: 'no-repeat',
