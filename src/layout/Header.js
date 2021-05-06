@@ -135,12 +135,12 @@ const Header = () => {
       </li>
       <li className={classes.desktopLi}>
         <a href='#!' className={classes.desktopLiA}>
-          MENU
+          ABOUT
         </a>
       </li>
       <li className={classes.desktopLi}>
         <a href='#!' className={classes.desktopLiA}>
-          ABOUT
+          MENU
         </a>
       </li>
       <li className={classes.desktopLi}>
@@ -176,15 +176,15 @@ const Header = () => {
           </li>
           <li className={classes.drawerLi}>
             <a href='#!' className={classes.drawerLiA}>
-              <RestaurantMenuIcon
-                className={classes.drawerIcon}
-              ></RestaurantMenuIcon>
-              MENU
+              <InfoIcon className={classes.drawerIcon}></InfoIcon> ABOUT
             </a>
           </li>
           <li className={classes.drawerLi}>
             <a href='#!' className={classes.drawerLiA}>
-              <InfoIcon className={classes.drawerIcon}></InfoIcon> ABOUT
+              <RestaurantMenuIcon
+                className={classes.drawerIcon}
+              ></RestaurantMenuIcon>
+              MENU
             </a>
           </li>
           <li className={classes.drawerLi}>
