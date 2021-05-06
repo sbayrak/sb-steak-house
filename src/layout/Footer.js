@@ -3,9 +3,6 @@ import { Container, Box, Grid, Typography } from '@material-ui/core';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import PhoneIcon from '@material-ui/icons/Phone';
-import HomeIcon from '@material-ui/icons/Home';
-import ForumIcon from '@material-ui/icons/Forum';
 
 import { makeStyles } from '@material-ui/core/styles';
 
