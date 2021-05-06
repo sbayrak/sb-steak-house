@@ -52,6 +52,10 @@ const useStyles = makeStyles((theme) => ({
     objectFit: 'contain',
     width: '100%',
     borderRadius: '5px',
+    transition: '0.5s ease',
+    '&:hover': {
+      transform: 'scale(0.99)',
+    },
   },
   viewMore: {
     textDecoration: 'none',

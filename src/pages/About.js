@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   aboutWelcomer: {
-    height: '55vh',
+    height: '50vh',
     width: '100%',
     backgroundImage: `url('${restaurant1}')`,
     backgroundAttachment: 'fixed',
@@ -54,8 +54,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   gridContainerBottom: {
-    marginTop: theme.spacing(10),
-    marginBottom: theme.spacing(10),
+    paddingBottom: theme.spacing(10),
+    backgroundColor: theme.palette.grey[900],
   },
   gridItemBottomTitle: {},
   Typo5: {
@@ -64,6 +64,9 @@ const useStyles = makeStyles((theme) => ({
     color: '#fff',
     padding: theme.spacing(2),
     marginBottom: theme.spacing(5),
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '30px',
+    },
   },
   typoSpan: {
     color: '#ff3c3c',
@@ -76,11 +79,11 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       transform: 'scale(0.99)',
     },
-    [theme.breakpoints.down('xs')]: {
-      width: '150px',
-    },
     [theme.breakpoints.down('sm')]: {
       width: '250px',
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '120px',
     },
   },
   chefTypo1: {
@@ -91,6 +94,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       textAlign: 'left',
       fontSize: '16px',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '12px',
     },
   },
   chefTypo1Span: {
@@ -104,6 +110,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       textAlign: 'left',
       fontSize: '12px',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '10px',
     },
   },
   chefTypo2Span: {
@@ -135,6 +144,15 @@ const About = () => {
           <Welcomer></Welcomer>
         </Grid>
         <Grid item md={12} className={classes.gridContainerBottom}>
+          <Grid item md={12} xs={12}>
+            <img
+              src='/images/wave3.svg'
+              alt='sbsteakhouse'
+              style={{
+                backgroundColor: '#333',
+              }}
+            />
+          </Grid>
           <Container maxWidth='lg'>
             <Grid container>
               <Grid
@@ -193,6 +211,9 @@ const About = () => {
               </Grid>
             </Grid>
           </Container>
+        </Grid>
+        <Grid item md={12} xs={12}>
+          <img src='/images/wave2.svg' alt='sbsteakhouse' />
         </Grid>
       </Grid>
     </Box>
