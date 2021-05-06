@@ -11,8 +11,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   box: {
-    marginTop: theme.spacing(10),
-    boxShadow: theme.shadows[15],
     backgroundColor: theme.palette.grey[900],
   },
   gridContainerTop: {
@@ -20,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
   },
   gridItemTop: {
     padding: theme.spacing(4),
-    marginTop: theme.spacing(10),
     [theme.breakpoints.down('sm')]: {
       marginTop: theme.spacing(5),
       padding: theme.spacing(2),
@@ -102,6 +99,11 @@ const Footer = () => {
   const classes = useStyles();
   return (
     <Box component='div' className={classes.box}>
+      <img
+        src='/images/waveFooter.svg'
+        alt='sbsteakhouse'
+        style={{ backgroundColor: '#333' }}
+      />
       <Container>
         <Grid container>
           <Grid container item md={12} className={classes.gridContainerTop}>
