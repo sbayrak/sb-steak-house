@@ -4,6 +4,7 @@ import Welcomer from '../components/Welcomer';
 import restaurant1 from '../images/restaurant1.png';
 
 import { makeStyles } from '@material-ui/core/styles';
+import PageHeader from '../layout/PageHeader';
 
 const useStyles = makeStyles((theme) => ({
   gridItemTop: {
@@ -127,19 +128,7 @@ const About = () => {
   return (
     <Box component='div'>
       <Grid container>
-        <Grid item md={12} className={classes.gridItemTop}>
-          <Box component='div' className={classes.aboutWelcomer}>
-            <Container className={classes.container}>
-              <Typography variant='h5' className={classes.Typo1}>
-                ABOUT US
-              </Typography>
-              <Typography variant='h3' className={classes.Typo2}>
-                <span className={classes.Typo4}>WELCOME TO </span>
-                <span className={classes.Typo3}>BAYRAK</span>
-              </Typography>
-            </Container>
-          </Box>
-        </Grid>
+        <PageHeader title1={'ABOUT US'}></PageHeader>
         <Grid item md={12}>
           <Welcomer></Welcomer>
         </Grid>
