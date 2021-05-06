@@ -129,22 +129,22 @@ const Header = () => {
   const desktop = (
     <ul className={classes.desktopUl}>
       <li className={classes.desktopLi}>
-        <a href='#!' className={classes.desktopLiA}>
+        <a href='/' className={classes.desktopLiA}>
           HOME
         </a>
       </li>
       <li className={classes.desktopLi}>
-        <a href='#!' className={classes.desktopLiA}>
+        <a href='/about' className={classes.desktopLiA}>
           ABOUT
         </a>
       </li>
       <li className={classes.desktopLi}>
-        <a href='#!' className={classes.desktopLiA}>
+        <a href='/menu' className={classes.desktopLiA}>
           MENU
         </a>
       </li>
       <li className={classes.desktopLi}>
-        <a href='#!' className={classes.desktopLiA}>
+        <a href='/gallery' className={classes.desktopLiA}>
           GALLERY
         </a>
       </li>
@@ -152,7 +152,7 @@ const Header = () => {
         className={classes.desktopLi}
         style={{ border: '2px solid #ff3c3c', borderRadius: '5px' }}
       >
-        <a href='#!' className={classes.desktopLiA}>
+        <a href='/reservation' className={classes.desktopLiA}>
           RESERVATION
         </a>
       </li>
@@ -170,17 +170,17 @@ const Header = () => {
       >
         <ul className={classes.drawerUl}>
           <li className={classes.drawerLi}>
-            <a href='#!' className={classes.drawerLiA}>
+            <a href='/' className={classes.drawerLiA}>
               <HomeIcon className={classes.drawerIcon}></HomeIcon> HOME
             </a>
           </li>
           <li className={classes.drawerLi}>
-            <a href='#!' className={classes.drawerLiA}>
+            <a href='/about' className={classes.drawerLiA}>
               <InfoIcon className={classes.drawerIcon}></InfoIcon> ABOUT
             </a>
           </li>
           <li className={classes.drawerLi}>
-            <a href='#!' className={classes.drawerLiA}>
+            <a href='/menu' className={classes.drawerLiA}>
               <RestaurantMenuIcon
                 className={classes.drawerIcon}
               ></RestaurantMenuIcon>
@@ -188,13 +188,13 @@ const Header = () => {
             </a>
           </li>
           <li className={classes.drawerLi}>
-            <a href='#!' className={classes.drawerLiA}>
+            <a href='/gallery' className={classes.drawerLiA}>
               <TheatersIcon className={classes.drawerIcon}></TheatersIcon>
               GALLERY
             </a>
           </li>
           <li className={classes.drawerLi}>
-            <a href='#!' className={classes.drawerLiA}>
+            <a href='/reservation' className={classes.drawerLiA}>
               <EventSeatIcon className={classes.drawerIcon}></EventSeatIcon>
               RESERVATION
             </a>
