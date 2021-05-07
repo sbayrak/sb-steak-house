@@ -15,8 +15,37 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    marginTop: theme.spacing(15),
+    marginBottom: theme.spacing(15),
+  },
+  gridContainer: {},
+  gridItemLeft: {},
+  leftTypo1: {
+    color: '#fff',
+    fontFamily: 'Pirata One',
+    letterSpacing: 3,
+  },
+  informationSubTitle: {
+    display: 'flex',
+    alignItems: 'center',
+    color: '#ff3c3c',
+    fontFamily: 'Pirata One',
+    letterSpacing: 2,
+  },
+  icon: {
+    paddingRight: theme.spacing(1),
+  },
+  informationBody: {
+    color: '#fff',
+  },
+  gridItemLeftItems: {
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: theme.spacing(2),
+    },
+  },
   paper: {
-    width: '70%',
+    width: '95%',
     backgroundColor: '#111',
     boxShadow: theme.shadows[10],
     padding: theme.spacing(2),
@@ -74,40 +103,6 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '20px',
     },
   },
-  container: {
-    border: '1px solid red',
-    marginTop: theme.spacing(15),
-  },
-  gridContainer: {
-    border: '1px solid red',
-  },
-  gridItemLeft: {
-    border: '1px solid yellow',
-  },
-  leftTypo1: {
-    color: '#fff',
-    fontFamily: 'Pirata One',
-    letterSpacing: 3,
-  },
-  informationSubTitle: {
-    border: '1px solid red',
-    display: 'flex',
-    alignItems: 'center',
-    color: '#fff',
-    fontFamily: 'Pirata One',
-    letterSpacing: 2,
-  },
-  icon: {
-    paddingRight: theme.spacing(1),
-  },
-  informationBody: {
-    color: '#fff',
-  },
-  gridItemLeftItems: {
-    [theme.breakpoints.down('sm')]: {
-      marginBottom: theme.spacing(2),
-    },
-  },
 }));
 
 const Reservation = () => {
@@ -137,7 +132,7 @@ const Reservation = () => {
               </Typography>
             </Grid>
             <Grid item md={12} className={classes.gridItemLeftItems}>
-              <Typography variant='h6' className={classes.informationSubTitle}>
+              <Typography variant='h5' className={classes.informationSubTitle}>
                 <CallIcon fontSize='small' className={classes.icon} /> Call
               </Typography>
               <Typography
@@ -148,7 +143,7 @@ const Reservation = () => {
               </Typography>
             </Grid>
             <Grid item md={12} className={classes.gridItemLeftItems}>
-              <Typography variant='h6' className={classes.informationSubTitle}>
+              <Typography variant='h5' className={classes.informationSubTitle}>
                 <HomeIcon fontSize='small' className={classes.icon} /> Address
               </Typography>
               <Typography
@@ -159,7 +154,7 @@ const Reservation = () => {
               </Typography>
             </Grid>
             <Grid item md={12} className={classes.gridItemLeftItems}>
-              <Typography variant='h6' className={classes.informationSubTitle}>
+              <Typography variant='h5' className={classes.informationSubTitle}>
                 <EmailIcon fontSize='small' className={classes.icon} /> E-Mail
               </Typography>
               <Typography
@@ -257,7 +252,6 @@ const Reservation = () => {
               containerElement={<div style={{ height: `400px` }} />}
               mapElement={<div style={{ height: `100%` }} />}
             />
-            ;
           </Grid>
         </Grid>
       </Container>
