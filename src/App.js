@@ -5,6 +5,7 @@ import './App.css';
 import Footer from './layout/Footer';
 import Home from './components/Home';
 import About from './pages/About';
+import Gallery from './pages/Gallery';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home}></Route>
           <Route exact path='/about' component={About}></Route>
+          <Route exact path='/gallery' component={Gallery}></Route>
         </Switch>
       </Router>
 
