@@ -4,8 +4,6 @@ import {
   Container,
   Grid,
   Typography,
-  Paper,
-  Button,
   Tabs,
   Tab,
   AppBar,
