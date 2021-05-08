@@ -86,6 +86,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[10],
     backgroundColor: theme.palette.grey[900],
     padding: theme.spacing(5),
+    marginBottom: theme.spacing(5),
   },
   gridRootContainer: {},
   gridContainerLeftAndRight: {
