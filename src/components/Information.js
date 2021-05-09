@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import {
   Box,
   Container,
@@ -166,6 +167,7 @@ const Information = () => {
                 </a>
               </Button>
             </Grid>
+
             <Grid
               item
               md={12}
@@ -204,84 +206,86 @@ const Information = () => {
             xs={12}
             className={classes.gridRightContainer}
           >
-            <Paper elevation={10} className={classes.paper}>
-              <Grid item md={12} className={classes.paperItem}>
-                <Typography
-                  variant='button'
-                  className={classes.Typo1}
-                  gutterBottom
-                  paragraph
-                >
-                  CALL FOR RESERVATION
-                </Typography>
-                <Typography
-                  variant='h3'
-                  className={classes.Typo2}
-                  gutterBottom
-                  paragraph
-                >
-                  Opening Hours
-                </Typography>
-              </Grid>
-              <Grid
-                container
-                item
-                md={12}
-                className={classes.paperItem}
-                spacing={2}
-              >
-                <Grid item md={6} xs={6}>
+            <Fade bottom>
+              <Paper elevation={10} className={classes.paper}>
+                <Grid item md={12} className={classes.paperItem}>
                   <Typography
-                    variant='subtitle1'
+                    variant='button'
                     className={classes.Typo1}
                     gutterBottom
                     paragraph
                   >
-                    Monday to Friday
-                  </Typography>
-                  <Typography variant='h4' className={classes.typoTime}>
-                    09:00
+                    CALL FOR RESERVATION
                   </Typography>
                   <Typography
-                    variant='h4'
-                    className={classes.typoTime}
-                    gutterBottom
-                  >
-                    00:00
-                  </Typography>
-                </Grid>
-                <Grid item md={6} xs={6}>
-                  <Typography
-                    variant='subtitle1'
-                    className={classes.Typo1}
+                    variant='h3'
+                    className={classes.Typo2}
                     gutterBottom
                     paragraph
                   >
-                    Saturday to Sunday
-                  </Typography>
-                  <Typography variant='h4' className={classes.typoTime}>
-                    08:00
-                  </Typography>
-                  <Typography
-                    variant='h4'
-                    className={classes.typoTime}
-                    gutterBottom
-                  >
-                    03:00
+                    Opening Hours
                   </Typography>
                 </Grid>
-              </Grid>
-              <Grid item md={12} className={classes.paperItem}>
-                <Typography
-                  variant='h4'
-                  className={classes.typoNumber}
-                  gutterBottom
-                  paragraph
+                <Grid
+                  container
+                  item
+                  md={12}
+                  className={classes.paperItem}
+                  spacing={2}
                 >
-                  +1 222-333-444
-                </Typography>
-              </Grid>
-            </Paper>
+                  <Grid item md={6} xs={6}>
+                    <Typography
+                      variant='subtitle1'
+                      className={classes.Typo1}
+                      gutterBottom
+                      paragraph
+                    >
+                      Monday to Friday
+                    </Typography>
+                    <Typography variant='h4' className={classes.typoTime}>
+                      09:00
+                    </Typography>
+                    <Typography
+                      variant='h4'
+                      className={classes.typoTime}
+                      gutterBottom
+                    >
+                      00:00
+                    </Typography>
+                  </Grid>
+                  <Grid item md={6} xs={6}>
+                    <Typography
+                      variant='subtitle1'
+                      className={classes.Typo1}
+                      gutterBottom
+                      paragraph
+                    >
+                      Saturday to Sunday
+                    </Typography>
+                    <Typography variant='h4' className={classes.typoTime}>
+                      08:00
+                    </Typography>
+                    <Typography
+                      variant='h4'
+                      className={classes.typoTime}
+                      gutterBottom
+                    >
+                      03:00
+                    </Typography>
+                  </Grid>
+                </Grid>
+                <Grid item md={12} className={classes.paperItem}>
+                  <Typography
+                    variant='h4'
+                    className={classes.typoNumber}
+                    gutterBottom
+                    paragraph
+                  >
+                    +1 222-333-444
+                  </Typography>
+                </Grid>
+              </Paper>
+            </Fade>
           </Grid>
         </Grid>
       </Container>

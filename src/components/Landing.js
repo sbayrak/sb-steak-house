@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel';
 import { Button, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#fff',
   },
   Typo1: {
-    width: '70%',
+    width: '100%',
     fontFamily: 'Quicksand, sans-serif',
     fontWeight: theme.typography.fontWeightBold,
     paddingBottom: theme.spacing(2),
@@ -54,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   Typo2: {
-    width: '70%',
+    width: '100%',
     paddingBottom: theme.spacing(7),
     color: theme.palette.grey[300],
     fontWeight: theme.typography.fontWeightMedium,
@@ -122,40 +123,47 @@ function Item({ item }) {
       <img src={item.img} alt={item.img}></img>
 
       <Grid container className={classes.gridContainer}>
+        <Fade top>
+          <Grid item md={12} className={`${classes.gridItem}`}>
+            <img
+              src='/images/bull2.png'
+              alt='sbsteakhouse'
+              className={classes.logo}
+            ></img>
+          </Grid>
+        </Fade>
         <Grid item md={12} className={`${classes.gridItem}`}>
-          <img
-            src='/images/bull2.png'
-            alt='sbsteakhouse'
-            className={classes.logo}
-          ></img>
-        </Grid>
-        <Grid item md={12} className={`${classes.gridItem}`}>
-          <Typography
-            variant='h3'
-            className={`${classes.Typo} ${classes.Typo1} `}
-          >
-            {item.typo1}
-          </Typography>
-        </Grid>
-        <Grid item md={12} className={`${classes.gridItem}`}>
-          <Typography
-            variant='subtitle1'
-            className={`${classes.Typo} ${classes.Typo2}`}
-          >
-            {item.typo2}
-          </Typography>
-        </Grid>
-
-        <Grid item md={12} className={`${classes.gridItem}`}>
-          <Button variant='outlined' style={{ border: 'none' }}>
-            <a
-              href='#!'
-              rel='noreferrer noopener'
-              className={`${classes.Typo} ${classes.btn} `}
+          <Fade bottom>
+            <Typography
+              variant='h3'
+              className={`${classes.Typo} ${classes.Typo1} `}
             >
-              {item.button}
-            </a>
-          </Button>
+              {item.typo1}
+            </Typography>
+          </Fade>
+        </Grid>
+        <Grid item md={12} className={`${classes.gridItem}`}>
+          <Fade bottom>
+            <Typography
+              variant='subtitle1'
+              className={`${classes.Typo} ${classes.Typo2}`}
+            >
+              {item.typo2}
+            </Typography>
+          </Fade>
+        </Grid>
+        <Grid item md={12} className={`${classes.gridItem}`}>
+          <Fade bottom>
+            <Button variant='outlined' style={{ border: 'none' }}>
+              <a
+                href='#!'
+                rel='noreferrer noopener'
+                className={`${classes.Typo} ${classes.btn} `}
+              >
+                {item.button}
+              </a>
+            </Button>
+          </Fade>
         </Grid>
       </Grid>
     </div>
