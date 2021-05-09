@@ -13,6 +13,7 @@ import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
 import InfoIcon from '@material-ui/icons/Info';
 import TheatersIcon from '@material-ui/icons/Theaters';
 import EventSeatIcon from '@material-ui/icons/EventSeat';
+import { useEffect } from 'react';
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: 'flex',
@@ -72,6 +73,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     alignItems: 'center',
     listStyle: 'none',
+    zIndex: 99,
     [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
@@ -120,11 +122,28 @@ const useStyles = makeStyles((theme) => ({
   drawerIcon: {
     paddingRight: theme.spacing(2),
   },
+  appbar: {
+    zIndex: 99,
+    transition: '0.5s ease',
+  },
 }));
 
 const Header = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const [bgColor, setBgColor] = useState('transparent');
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 0) {
+      setBgColor('#212121');
+    } else {
+      setBgColor('transparent');
+    }
+  };
 
   const desktop = (
     <ul className={classes.desktopUl}>
@@ -206,7 +225,8 @@ const Header = () => {
   return (
     <AppBar
       position='fixed'
-      style={{ backgroundColor: 'transparent' }}
+      style={{ background: bgColor }}
+      className={classes.appbar}
       elevation={0}
     >
       <Toolbar className={classes.toolbar}>
