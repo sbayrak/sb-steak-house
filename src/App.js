@@ -8,6 +8,7 @@ import About from './pages/About';
 import Gallery from './pages/Gallery';
 import Reservation from './pages/Reservation';
 import Menu from './pages/Menu';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path='/gallery' component={Gallery}></Route>
           <Route exact path='/reservation' component={Reservation}></Route>
           <Route exact path='/menu' component={Menu}></Route>
+          <Route component={NotFound}></Route>
         </Switch>
       </Router>
 
