@@ -10,6 +10,7 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import PageHeader from '../layout/PageHeader';
+import Fade from 'react-reveal';
 import PropTypes from 'prop-types';
 
 /* ICONS */
@@ -202,6 +203,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   imgs: {
+    width: '100%',
     boxShadow: theme.shadows[10],
     transition: '0.5s ease',
     '&:hover': {
@@ -235,12 +237,14 @@ const Menu = () => {
             className={classes.gridContainerLeftAndRight}
           >
             <Grid item md={12}>
-              <Typography variant='button' className={classes.Typo1}>
-                OUR MENU
-              </Typography>
-              <Typography variant='h3' className={classes.Typo2}>
-                <span className={classes.typo2Span}>Menu</span> List
-              </Typography>
+              <Fade bottom>
+                <Typography variant='button' className={classes.Typo1}>
+                  OUR MENU
+                </Typography>
+                <Typography variant='h3' className={classes.Typo2}>
+                  <span className={classes.typo2Span}>Menu</span> List
+                </Typography>
+              </Fade>
             </Grid>
 
             <Grid

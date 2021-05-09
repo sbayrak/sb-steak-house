@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal';
 import { Box, Container, Grid, Typography } from '@material-ui/core';
 import Welcomer from '../components/Welcomer';
 import restaurant1 from '../images/restaurant1.png';
@@ -150,9 +151,11 @@ const About = () => {
                 className={classes.gridItemBottomTitle}
                 xs={12}
               >
-                <Typography variant='h3' className={classes.Typo5}>
-                  <span className={classes.typoSpan}>Our</span> Chef Team
-                </Typography>
+                <Fade bottom>
+                  <Typography variant='h3' className={classes.Typo5}>
+                    <span className={classes.typoSpan}>Our</span> Chef Team
+                  </Typography>
+                </Fade>
               </Grid>
               <Grid container item md={12} spacing={3}>
                 <Grid item md={4} xs={6}>
@@ -161,6 +164,7 @@ const About = () => {
                     alt='sbsteakhousechef'
                     className={classes.chefImgs}
                   />
+
                   <Typography variant='h5' className={classes.chefTypo1}>
                     <span className={classes.chefTypo1Span}>Chef.</span> Suat
                     Bayrak
@@ -175,6 +179,7 @@ const About = () => {
                     alt='sbsteakhousechef'
                     className={classes.chefImgs}
                   />
+
                   <Typography variant='h5' className={classes.chefTypo1}>
                     <span className={classes.chefTypo1Span}>Chef.</span> Suat
                     Bayrak
@@ -189,6 +194,7 @@ const About = () => {
                     alt='sbsteakhousechef'
                     className={classes.chefImgs}
                   />
+
                   <Typography variant='h5' className={classes.chefTypo1}>
                     <span className={classes.chefTypo1Span}>Chef.</span> Suat
                     Bayrak

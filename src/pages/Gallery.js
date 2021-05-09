@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Container, Grid, Typography } from '@material-ui/core';
 import PageHeader from '../layout/PageHeader';
+import Fade from 'react-reveal';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -12,6 +13,8 @@ const useStyles = makeStyles((theme) => ({
     color: '#fff',
     fontFamily: 'Pirata One',
     letterSpacing: 3,
+    borderBottom: '1px solid #ff3c3c',
+    paddingBottom: theme.spacing(1),
     [theme.breakpoints.down('sm')]: {
       fontSize: '30px',
     },
@@ -71,32 +74,36 @@ const Gallery = () => {
         </Grid>
         <Grid container className={classes.gridContainer}>
           <Grid container item md={12} className={classes.gridItem}>
-            <Grid item md={6} className={classes.gridImgItem}>
-              <img
-                src='/images/welcomer1x550x550.jpg'
-                alt='sbsteakhouse'
-                style={{ width: '100%' }}
-                className={classes.imgs}
-              />
-            </Grid>
-            <Grid item md={6} className={classes.gridImgItem}>
-              <img
-                src='/images/welcomer2x550x550.jpg'
-                alt='sbsteakhouse'
-                style={{ width: '100%' }}
-                className={classes.imgs}
-              />
-            </Grid>
+            <Fade top>
+              <Grid item md={12} className={classes.gridImgItem}>
+                <img
+                  src='/images/welcomer1x550x550.jpg'
+                  alt='sbsteakhouse'
+                  style={{ width: '100%' }}
+                  className={classes.imgs}
+                />
+              </Grid>
+
+              <Grid item md={12} className={classes.gridImgItem}>
+                <img
+                  src='/images/welcomer2x550x550.jpg'
+                  alt='sbsteakhouse'
+                  style={{ width: '100%' }}
+                  className={classes.imgs}
+                />
+              </Grid>
+            </Fade>
           </Grid>
           <Grid container item md={12}>
-            <Grid item md={12} className={classes.gridImgItem}>
-              <img
-                src='/images/welcomer3xlong.jpg'
-                alt='sbsteakhouse'
-                style={{ width: '100%' }}
-                className={classes.imgs}
-              />
-            </Grid>
+            <Fade left>
+              <Grid item md={12} className={classes.gridImgItem}>
+                <img
+                  src='/images/welcomer3xlong.jpg'
+                  alt='sbsteakhouse'
+                  className={classes.imgs}
+                />
+              </Grid>
+            </Fade>
           </Grid>
           <Grid container item md={12}>
             <Grid item md={6} className={classes.gridImgItem}>
