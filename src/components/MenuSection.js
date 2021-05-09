@@ -80,6 +80,8 @@ const useStyles = makeStyles((theme) => ({
   container: {
     marginTop: theme.spacing(5),
     minHeight: '80vh',
+    backgroundColor: theme.palette.grey[900],
+    boxShadow: theme.shadows[10],
     [theme.breakpoints.down('sm')]: {
       padding: theme.spacing(0),
     },
