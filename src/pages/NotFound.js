@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    border: '1px solid red',
     marginTop: theme.spacing(20),
   },
   Typo1: {
