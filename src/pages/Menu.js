@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import {
   Box,
   Container,
@@ -43,6 +43,7 @@ import {
   dessert1,
   dessert2,
 } from '../utils/utils';
+import MetaHelmet from '../utils/MetaHelmet';
 
 // UTILS
 
@@ -226,793 +227,801 @@ const Menu = () => {
   };
 
   return (
-    <Box component='div'>
-      <PageHeader title1={'MENU'}></PageHeader>
-      <Container maxWidth='lg' className={classes.container}>
-        <Grid container className={classes.gridRootContainer}>
-          <Grid
-            container
-            item
-            md={9}
-            className={classes.gridContainerLeftAndRight}
-          >
-            <Grid item md={12}>
-              <Fade bottom>
-                <Typography variant='button' className={classes.Typo1}>
-                  OUR MENU
-                </Typography>
-                <Typography variant='h3' className={classes.Typo2}>
-                  <span className={classes.typo2Span}>Menu</span> List
-                </Typography>
-              </Fade>
-            </Grid>
+    <Fragment>
+      <MetaHelmet title='BAYRAK Steakhouse | Menu'></MetaHelmet>
 
+      <Box component='div'>
+        <PageHeader title1={'MENU'}></PageHeader>
+        <Container maxWidth='lg' className={classes.container}>
+          <Grid container className={classes.gridRootContainer}>
             <Grid
+              container
               item
-              md={12}
-              className={`${classes.gridItem} ${classes.gridBottom}`}
+              md={9}
+              className={classes.gridContainerLeftAndRight}
             >
-              <div className={classes.wrapper}>
-                <TabPanel value={value} index={0}>
-                  <Grid
-                    container
-                    className={classes.tabPanelContainer}
-                    spacing={4}
-                  >
-                    <Grid
-                      container
-                      item
-                      md={6}
-                      className={classes.tabPanelLeftAndRight}
-                    >
-                      {breakfast1.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                    <Grid
-                      container
-                      item
-                      md={6}
-                      className={classes.tabPanelLeftAndRight}
-                    >
-                      {breakfast2.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                  </Grid>
-                </TabPanel>
-                <TabPanel value={value} index={1}>
-                  <Grid
-                    container
-                    className={classes.tabPanelContainer}
-                    spacing={4}
-                  >
-                    <Grid container item md={6}>
-                      {dessert1.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                    <Grid container item md={6}>
-                      {dessert2.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                  </Grid>
-                </TabPanel>
-                <TabPanel value={value} index={2}>
-                  <Grid
-                    container
-                    className={classes.tabPanelContainer}
-                    spacing={4}
-                  >
-                    <Grid container item md={6}>
-                      {starters1.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                    <Grid container item md={6}>
-                      {starters2.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                  </Grid>
-                </TabPanel>
-                <TabPanel value={value} index={3}>
-                  <Grid
-                    container
-                    className={classes.tabPanelContainer}
-                    spacing={4}
-                  >
-                    <Grid container item md={6}>
-                      {steaks1.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                    <Grid container item md={6}>
-                      {steaks2.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                  </Grid>
-                </TabPanel>
-                <TabPanel value={value} index={4}>
-                  <Grid
-                    container
-                    className={classes.tabPanelContainer}
-                    spacing={4}
-                  >
-                    <Grid container item md={6}>
-                      {salads1.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                    <Grid container item md={6}>
-                      {salads2.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                  </Grid>
-                </TabPanel>
-                <TabPanel value={value} index={5}>
-                  <Grid
-                    container
-                    className={classes.tabPanelContainer}
-                    spacing={4}
-                  >
-                    <Grid container item md={6}>
-                      {appetizers1.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                    <Grid container item md={6}>
-                      {appetizers2.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                  </Grid>
-                </TabPanel>
-                <TabPanel value={value} index={6}>
-                  <Grid
-                    container
-                    className={classes.tabPanelContainer}
-                    spacing={4}
-                  >
-                    <Grid container item md={6}>
-                      {burgers1.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                    <Grid container item md={6}>
-                      {burgers2.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                  </Grid>
-                </TabPanel>
-                <TabPanel value={value} index={7}>
-                  <Grid
-                    container
-                    className={classes.tabPanelContainer}
-                    spacing={4}
-                  >
-                    <Grid container item md={6}>
-                      {drinks1.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                    <Grid container item md={6}>
-                      {drinks2.map((item, index) => (
-                        <Grid
-                          item
-                          md={12}
-                          className={classes.tabPanelItem}
-                          key={index}
-                        >
-                          <Box
-                            component='div'
-                            className={classes.tabPanelItemTop}
-                          >
-                            <Typography
-                              variant='h5'
-                              className={classes.tabPanelTypo1}
-                            >
-                              {item.name}
-                            </Typography>
-                            <Typography
-                              variant='h6'
-                              className={classes.tabPanelTypo2}
-                            >
-                              {item.price}
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant='body2'
-                            gutterBottom
-                            paragraph
-                            className={classes.tabPanelTypo3}
-                          >
-                            {item.desc}
-                          </Typography>
-                        </Grid>
-                      ))}
-                    </Grid>
-                  </Grid>
-                </TabPanel>
-              </div>
-            </Grid>
-          </Grid>
-          <Grid container item md={3}>
-            <AppBar position='static' className={classes.appbar} elevation={1}>
-              <Tabs
-                value={value}
-                onChange={handleChange}
-                variant='scrollable'
-                scrollButtons='on'
-                aria-label='scrollable auto tabs example'
-                orientation='vertical'
+              <Grid item md={12}>
+                <Fade bottom>
+                  <Typography variant='button' className={classes.Typo1}>
+                    OUR MENU
+                  </Typography>
+                  <Typography variant='h3' className={classes.Typo2}>
+                    <span className={classes.typo2Span}>Menu</span> List
+                  </Typography>
+                </Fade>
+              </Grid>
+
+              <Grid
+                item
+                md={12}
+                className={`${classes.gridItem} ${classes.gridBottom}`}
               >
-                <Tab
-                  label='Breakfast'
-                  icon={<FontAwesomeIcon icon={faCoffee} size='lg' />}
-                  className={classes.tab}
-                  {...a11yProps(0)}
-                />
-                <Tab
-                  label='Dessert'
-                  icon={<FontAwesomeIcon icon={faIceCream} size='lg' />}
-                  className={classes.tab}
-                  {...a11yProps(1)}
-                />
-                <Tab
-                  label='Starters'
-                  icon={<FontAwesomeIcon icon={faHourglass} size='lg' />}
-                  className={classes.tab}
-                  {...a11yProps(2)}
-                />
-                <Tab
-                  label='Steaks'
-                  icon={<FontAwesomeIcon icon={faDrumstickBite} size='lg' />}
-                  className={classes.tab}
-                  {...a11yProps(3)}
-                />
-                <Tab
-                  label='Salads'
-                  icon={<FontAwesomeIcon icon={faCarrot} size='lg' />}
-                  className={classes.tab}
-                  {...a11yProps(4)}
-                />
-                <Tab
-                  label='Appetizers'
-                  icon={<FontAwesomeIcon icon={faBreadSlice} size='lg' />}
-                  className={classes.tab}
-                  {...a11yProps(5)}
-                />
-                <Tab
-                  label='Burgers'
-                  icon={<FontAwesomeIcon icon={faHamburger} size='lg' />}
-                  className={classes.tab}
-                  {...a11yProps(6)}
-                />
-                <Tab
-                  label='Drinks'
-                  icon={<FontAwesomeIcon icon={faTint} size='lg' />}
-                  className={classes.tab}
-                  {...a11yProps(7)}
-                />
-              </Tabs>
-            </AppBar>
+                <div className={classes.wrapper}>
+                  <TabPanel value={value} index={0}>
+                    <Grid
+                      container
+                      className={classes.tabPanelContainer}
+                      spacing={4}
+                    >
+                      <Grid
+                        container
+                        item
+                        md={6}
+                        className={classes.tabPanelLeftAndRight}
+                      >
+                        {breakfast1.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                      <Grid
+                        container
+                        item
+                        md={6}
+                        className={classes.tabPanelLeftAndRight}
+                      >
+                        {breakfast2.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                    </Grid>
+                  </TabPanel>
+                  <TabPanel value={value} index={1}>
+                    <Grid
+                      container
+                      className={classes.tabPanelContainer}
+                      spacing={4}
+                    >
+                      <Grid container item md={6}>
+                        {dessert1.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                      <Grid container item md={6}>
+                        {dessert2.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                    </Grid>
+                  </TabPanel>
+                  <TabPanel value={value} index={2}>
+                    <Grid
+                      container
+                      className={classes.tabPanelContainer}
+                      spacing={4}
+                    >
+                      <Grid container item md={6}>
+                        {starters1.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                      <Grid container item md={6}>
+                        {starters2.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                    </Grid>
+                  </TabPanel>
+                  <TabPanel value={value} index={3}>
+                    <Grid
+                      container
+                      className={classes.tabPanelContainer}
+                      spacing={4}
+                    >
+                      <Grid container item md={6}>
+                        {steaks1.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                      <Grid container item md={6}>
+                        {steaks2.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                    </Grid>
+                  </TabPanel>
+                  <TabPanel value={value} index={4}>
+                    <Grid
+                      container
+                      className={classes.tabPanelContainer}
+                      spacing={4}
+                    >
+                      <Grid container item md={6}>
+                        {salads1.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                      <Grid container item md={6}>
+                        {salads2.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                    </Grid>
+                  </TabPanel>
+                  <TabPanel value={value} index={5}>
+                    <Grid
+                      container
+                      className={classes.tabPanelContainer}
+                      spacing={4}
+                    >
+                      <Grid container item md={6}>
+                        {appetizers1.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                      <Grid container item md={6}>
+                        {appetizers2.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                    </Grid>
+                  </TabPanel>
+                  <TabPanel value={value} index={6}>
+                    <Grid
+                      container
+                      className={classes.tabPanelContainer}
+                      spacing={4}
+                    >
+                      <Grid container item md={6}>
+                        {burgers1.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                      <Grid container item md={6}>
+                        {burgers2.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                    </Grid>
+                  </TabPanel>
+                  <TabPanel value={value} index={7}>
+                    <Grid
+                      container
+                      className={classes.tabPanelContainer}
+                      spacing={4}
+                    >
+                      <Grid container item md={6}>
+                        {drinks1.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                      <Grid container item md={6}>
+                        {drinks2.map((item, index) => (
+                          <Grid
+                            item
+                            md={12}
+                            className={classes.tabPanelItem}
+                            key={index}
+                          >
+                            <Box
+                              component='div'
+                              className={classes.tabPanelItemTop}
+                            >
+                              <Typography
+                                variant='h5'
+                                className={classes.tabPanelTypo1}
+                              >
+                                {item.name}
+                              </Typography>
+                              <Typography
+                                variant='h6'
+                                className={classes.tabPanelTypo2}
+                              >
+                                {item.price}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              variant='body2'
+                              gutterBottom
+                              paragraph
+                              className={classes.tabPanelTypo3}
+                            >
+                              {item.desc}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
+                    </Grid>
+                  </TabPanel>
+                </div>
+              </Grid>
+            </Grid>
+            <Grid container item md={3}>
+              <AppBar
+                position='static'
+                className={classes.appbar}
+                elevation={1}
+              >
+                <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  variant='scrollable'
+                  scrollButtons='on'
+                  aria-label='scrollable auto tabs example'
+                  orientation='vertical'
+                >
+                  <Tab
+                    label='Breakfast'
+                    icon={<FontAwesomeIcon icon={faCoffee} size='lg' />}
+                    className={classes.tab}
+                    {...a11yProps(0)}
+                  />
+                  <Tab
+                    label='Dessert'
+                    icon={<FontAwesomeIcon icon={faIceCream} size='lg' />}
+                    className={classes.tab}
+                    {...a11yProps(1)}
+                  />
+                  <Tab
+                    label='Starters'
+                    icon={<FontAwesomeIcon icon={faHourglass} size='lg' />}
+                    className={classes.tab}
+                    {...a11yProps(2)}
+                  />
+                  <Tab
+                    label='Steaks'
+                    icon={<FontAwesomeIcon icon={faDrumstickBite} size='lg' />}
+                    className={classes.tab}
+                    {...a11yProps(3)}
+                  />
+                  <Tab
+                    label='Salads'
+                    icon={<FontAwesomeIcon icon={faCarrot} size='lg' />}
+                    className={classes.tab}
+                    {...a11yProps(4)}
+                  />
+                  <Tab
+                    label='Appetizers'
+                    icon={<FontAwesomeIcon icon={faBreadSlice} size='lg' />}
+                    className={classes.tab}
+                    {...a11yProps(5)}
+                  />
+                  <Tab
+                    label='Burgers'
+                    icon={<FontAwesomeIcon icon={faHamburger} size='lg' />}
+                    className={classes.tab}
+                    {...a11yProps(6)}
+                  />
+                  <Tab
+                    label='Drinks'
+                    icon={<FontAwesomeIcon icon={faTint} size='lg' />}
+                    className={classes.tab}
+                    {...a11yProps(7)}
+                  />
+                </Tabs>
+              </AppBar>
+            </Grid>
+            <Grid container className={classes.gridContainer}>
+              <Grid container item md={12} className={classes.gridItem} xs={12}>
+                <Grid item md={6} className={classes.gridImgItem} xs={12}>
+                  <img
+                    src='/images/welcomer1x550x550.jpg'
+                    alt='sbsteakhouse'
+                    className={`${classes.imgs} ${classes.imgsTop}`}
+                  />
+                </Grid>
+                <Grid item md={6} className={classes.gridImgItem} xs={12}>
+                  <img
+                    src='/images/welcomer2x550x550.jpg'
+                    alt='sbsteakhouse'
+                    className={`${classes.imgs} ${classes.imgsTop}`}
+                  />
+                </Grid>
+              </Grid>
+              <Grid container item md={12}>
+                <Grid item md={12} className={classes.gridImgItem}>
+                  <img
+                    src='/images/welcomer3xlong.jpg'
+                    alt='sbsteakhouse'
+                    className={`${classes.imgs} ${classes.imgsTop}`}
+                  />
+                </Grid>
+              </Grid>
+              <Grid container item md={12}>
+                <Grid item md={6} className={classes.gridImgItem}>
+                  <img
+                    src='/images/steak6.jpg'
+                    alt='sbsteakhouse'
+                    className={`${classes.imgs} ${classes.imgsTop}`}
+                  />
+                </Grid>
+                <Grid item md={6} className={classes.gridImgItem}>
+                  <img
+                    src='/images/steak7.jpg'
+                    alt='sbsteakhouse'
+                    className={`${classes.imgs} ${classes.imgsTop}`}
+                  />
+                </Grid>
+              </Grid>
+            </Grid>
           </Grid>
-          <Grid container className={classes.gridContainer}>
-            <Grid container item md={12} className={classes.gridItem} xs={12}>
-              <Grid item md={6} className={classes.gridImgItem} xs={12}>
-                <img
-                  src='/images/welcomer1x550x550.jpg'
-                  alt='sbsteakhouse'
-                  className={`${classes.imgs} ${classes.imgsTop}`}
-                />
-              </Grid>
-              <Grid item md={6} className={classes.gridImgItem} xs={12}>
-                <img
-                  src='/images/welcomer2x550x550.jpg'
-                  alt='sbsteakhouse'
-                  className={`${classes.imgs} ${classes.imgsTop}`}
-                />
-              </Grid>
-            </Grid>
-            <Grid container item md={12}>
-              <Grid item md={12} className={classes.gridImgItem}>
-                <img
-                  src='/images/welcomer3xlong.jpg'
-                  alt='sbsteakhouse'
-                  className={`${classes.imgs} ${classes.imgsTop}`}
-                />
-              </Grid>
-            </Grid>
-            <Grid container item md={12}>
-              <Grid item md={6} className={classes.gridImgItem}>
-                <img
-                  src='/images/steak6.jpg'
-                  alt='sbsteakhouse'
-                  className={`${classes.imgs} ${classes.imgsTop}`}
-                />
-              </Grid>
-              <Grid item md={6} className={classes.gridImgItem}>
-                <img
-                  src='/images/steak7.jpg'
-                  alt='sbsteakhouse'
-                  className={`${classes.imgs} ${classes.imgsTop}`}
-                />
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+    </Fragment>
   );
 };
 

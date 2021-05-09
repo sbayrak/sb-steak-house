@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Fade from 'react-reveal';
 import { Box, Container, Grid, Typography, Paper } from '@material-ui/core';
 import PageHeader from '../layout/PageHeader';
@@ -14,6 +14,7 @@ import {
 } from 'react-google-maps';
 
 import { makeStyles } from '@material-ui/core/styles';
+import MetaHelmet from '../utils/MetaHelmet';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -118,165 +119,174 @@ const Reservation = () => {
   );
 
   return (
-    <Box component='div'>
-      <PageHeader title1='RESERVATION'></PageHeader>
-      <Container maxWidth='lg' className={classes.container}>
-        <Grid container className={classes.gridContainer} spacing={6}>
-          <Grid container item md={6} className={classes.gridItemLeft}>
-            <Fade bottom>
-              <Grid item md={12} xs={12}>
-                <Typography
-                  variant='h4'
-                  className={classes.leftTypo1}
-                  gutterBottom
-                >
-                  Information
-                </Typography>
-              </Grid>
-            </Fade>
-            <Grid item md={12} className={classes.gridItemLeftItems}>
-              <Fade bottom>
-                <Typography
-                  variant='h5'
-                  className={classes.informationSubTitle}
-                >
-                  <CallIcon fontSize='small' className={classes.icon} /> Call
-                </Typography>
-                <Typography
-                  variant='subtitle2'
-                  className={classes.informationBody}
-                >
-                  +1 222 333 4455
-                </Typography>
-              </Fade>
-            </Grid>
-            <Grid item md={12} className={classes.gridItemLeftItems}>
-              <Fade bottom>
-                <Typography
-                  variant='h5'
-                  className={classes.informationSubTitle}
-                >
-                  <HomeIcon fontSize='small' className={classes.icon} /> Address
-                </Typography>
-                <Typography
-                  variant='subtitle2'
-                  className={classes.informationBody}
-                >
-                  17 Kings St, Washington DC 123456 USA
-                </Typography>
-              </Fade>
-            </Grid>
-            <Grid item md={12} className={classes.gridItemLeftItems}>
-              <Fade bottom>
-                <Typography
-                  variant='h5'
-                  className={classes.informationSubTitle}
-                >
-                  <EmailIcon fontSize='small' className={classes.icon} /> E-Mail
-                </Typography>
-                <Typography
-                  variant='subtitle2'
-                  className={classes.informationBody}
-                >
-                  example@example.com
-                </Typography>
-              </Fade>
-            </Grid>
-          </Grid>
+    <Fragment>
+      <MetaHelmet
+        title='BAYRAK Steakhouse | Reservation'
+        content='BAYRAK Steakhouse and Burger'
+      ></MetaHelmet>
 
-          <Grid item md={6}>
-            <Fade bottom>
-              <Paper elevation={10} className={classes.paper}>
-                <Grid item md={12} className={classes.paperItem}>
-                  <Typography
-                    variant='button'
-                    className={classes.Typo1}
-                    gutterBottom
-                    paragraph
-                  >
-                    CALL FOR RESERVATION
-                  </Typography>
-                  <Typography
-                    variant='h3'
-                    className={classes.Typo2}
-                    gutterBottom
-                    paragraph
-                  >
-                    Opening Hours
-                  </Typography>
-                </Grid>
-                <Grid
-                  container
-                  item
-                  md={12}
-                  className={classes.paperItem}
-                  spacing={2}
-                >
-                  <Grid item md={6} xs={6}>
-                    <Typography
-                      variant='subtitle1'
-                      className={classes.Typo1}
-                      gutterBottom
-                      paragraph
-                    >
-                      Monday to Friday
-                    </Typography>
-                    <Typography variant='h4' className={classes.typoTime}>
-                      09:00
-                    </Typography>
-                    <Typography
-                      variant='h4'
-                      className={classes.typoTime}
-                      gutterBottom
-                    >
-                      00:00
-                    </Typography>
-                  </Grid>
-                  <Grid item md={6} xs={6}>
-                    <Typography
-                      variant='subtitle1'
-                      className={classes.Typo1}
-                      gutterBottom
-                      paragraph
-                    >
-                      Saturday to Sunday
-                    </Typography>
-                    <Typography variant='h4' className={classes.typoTime}>
-                      08:00
-                    </Typography>
-                    <Typography
-                      variant='h4'
-                      className={classes.typoTime}
-                      gutterBottom
-                    >
-                      03:00
-                    </Typography>
-                  </Grid>
-                </Grid>
-                <Grid item md={12} className={classes.paperItem}>
+      <Box component='div'>
+        <PageHeader title1='RESERVATION'></PageHeader>
+        <Container maxWidth='lg' className={classes.container}>
+          <Grid container className={classes.gridContainer} spacing={6}>
+            <Grid container item md={6} className={classes.gridItemLeft}>
+              <Fade bottom>
+                <Grid item md={12} xs={12}>
                   <Typography
                     variant='h4'
-                    className={classes.typoNumber}
+                    className={classes.leftTypo1}
                     gutterBottom
-                    paragraph
                   >
-                    +1 222-333-444
+                    Information
                   </Typography>
                 </Grid>
-              </Paper>
-            </Fade>
+              </Fade>
+              <Grid item md={12} className={classes.gridItemLeftItems}>
+                <Fade bottom>
+                  <Typography
+                    variant='h5'
+                    className={classes.informationSubTitle}
+                  >
+                    <CallIcon fontSize='small' className={classes.icon} /> Call
+                  </Typography>
+                  <Typography
+                    variant='subtitle2'
+                    className={classes.informationBody}
+                  >
+                    +1 222 333 4455
+                  </Typography>
+                </Fade>
+              </Grid>
+              <Grid item md={12} className={classes.gridItemLeftItems}>
+                <Fade bottom>
+                  <Typography
+                    variant='h5'
+                    className={classes.informationSubTitle}
+                  >
+                    <HomeIcon fontSize='small' className={classes.icon} />{' '}
+                    Address
+                  </Typography>
+                  <Typography
+                    variant='subtitle2'
+                    className={classes.informationBody}
+                  >
+                    17 Kings St, Washington DC 123456 USA
+                  </Typography>
+                </Fade>
+              </Grid>
+              <Grid item md={12} className={classes.gridItemLeftItems}>
+                <Fade bottom>
+                  <Typography
+                    variant='h5'
+                    className={classes.informationSubTitle}
+                  >
+                    <EmailIcon fontSize='small' className={classes.icon} />{' '}
+                    E-Mail
+                  </Typography>
+                  <Typography
+                    variant='subtitle2'
+                    className={classes.informationBody}
+                  >
+                    example@example.com
+                  </Typography>
+                </Fade>
+              </Grid>
+            </Grid>
+
+            <Grid item md={6}>
+              <Fade bottom>
+                <Paper elevation={10} className={classes.paper}>
+                  <Grid item md={12} className={classes.paperItem}>
+                    <Typography
+                      variant='button'
+                      className={classes.Typo1}
+                      gutterBottom
+                      paragraph
+                    >
+                      CALL FOR RESERVATION
+                    </Typography>
+                    <Typography
+                      variant='h3'
+                      className={classes.Typo2}
+                      gutterBottom
+                      paragraph
+                    >
+                      Opening Hours
+                    </Typography>
+                  </Grid>
+                  <Grid
+                    container
+                    item
+                    md={12}
+                    className={classes.paperItem}
+                    spacing={2}
+                  >
+                    <Grid item md={6} xs={6}>
+                      <Typography
+                        variant='subtitle1'
+                        className={classes.Typo1}
+                        gutterBottom
+                        paragraph
+                      >
+                        Monday to Friday
+                      </Typography>
+                      <Typography variant='h4' className={classes.typoTime}>
+                        09:00
+                      </Typography>
+                      <Typography
+                        variant='h4'
+                        className={classes.typoTime}
+                        gutterBottom
+                      >
+                        00:00
+                      </Typography>
+                    </Grid>
+                    <Grid item md={6} xs={6}>
+                      <Typography
+                        variant='subtitle1'
+                        className={classes.Typo1}
+                        gutterBottom
+                        paragraph
+                      >
+                        Saturday to Sunday
+                      </Typography>
+                      <Typography variant='h4' className={classes.typoTime}>
+                        08:00
+                      </Typography>
+                      <Typography
+                        variant='h4'
+                        className={classes.typoTime}
+                        gutterBottom
+                      >
+                        03:00
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid item md={12} className={classes.paperItem}>
+                    <Typography
+                      variant='h4'
+                      className={classes.typoNumber}
+                      gutterBottom
+                      paragraph
+                    >
+                      +1 222-333-444
+                    </Typography>
+                  </Grid>
+                </Paper>
+              </Fade>
+            </Grid>
+            <Grid item md={12} xs={12}>
+              <MapWithAMarker
+                googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}&v=3.exp&libraries=geometry,drawing,places`}
+                loadingElement={<div style={{ height: `100%` }} />}
+                containerElement={<div style={{ height: `400px` }} />}
+                mapElement={<div style={{ height: `100%` }} />}
+              />
+            </Grid>
           </Grid>
-          <Grid item md={12} xs={12}>
-            <MapWithAMarker
-              googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}&v=3.exp&libraries=geometry,drawing,places`}
-              loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `400px` }} />}
-              mapElement={<div style={{ height: `100%` }} />}
-            />
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+    </Fragment>
   );
 };
 

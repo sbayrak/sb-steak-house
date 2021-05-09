@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Fade from 'react-reveal';
 import { Box, Container, Grid, Typography } from '@material-ui/core';
 import Welcomer from '../components/Welcomer';
@@ -6,6 +6,7 @@ import restaurant1 from '../images/restaurant1.png';
 
 import { makeStyles } from '@material-ui/core/styles';
 import PageHeader from '../layout/PageHeader';
+import MetaHelmet from '../utils/MetaHelmet';
 
 const useStyles = makeStyles((theme) => ({
   gridItemTop: {
@@ -127,91 +128,103 @@ const useStyles = makeStyles((theme) => ({
 const About = () => {
   const classes = useStyles();
   return (
-    <Box component='div'>
-      <Grid container>
-        <PageHeader title1={'ABOUT US'}></PageHeader>
-        <Grid item md={12}>
-          <Welcomer></Welcomer>
-        </Grid>
-        <Grid item md={12} className={classes.gridContainerBottom}>
-          <Grid item md={12} xs={12}>
-            <img
-              src='/images/wave3.svg'
-              alt='sbsteakhouse'
-              style={{
-                backgroundColor: '#333',
-              }}
-            />
+    <Fragment>
+      <MetaHelmet title='BAYRAK Steakhouse | About'></MetaHelmet>
+      <Box component='div'>
+        <Grid container>
+          <PageHeader title1={'ABOUT US'}></PageHeader>
+          <Grid item md={12}>
+            <Welcomer></Welcomer>
           </Grid>
-          <Container maxWidth='lg'>
-            <Grid container>
-              <Grid
-                item
-                md={12}
-                className={classes.gridItemBottomTitle}
-                xs={12}
-              >
-                <Fade bottom>
-                  <Typography variant='h3' className={classes.Typo5}>
-                    <span className={classes.typoSpan}>Our</span> Chef Team
-                  </Typography>
-                </Fade>
-              </Grid>
-              <Grid container item md={12} spacing={3}>
-                <Grid item md={4} xs={6}>
-                  <img
-                    src='/images/chef1.jpg'
-                    alt='sbsteakhousechef'
-                    className={classes.chefImgs}
-                  />
-
-                  <Typography variant='h5' className={classes.chefTypo1}>
-                    <span className={classes.chefTypo1Span}>Chef.</span> Suat
-                    Bayrak
-                  </Typography>
-                  <Typography variant='subtitle2' className={classes.chefTypo2}>
-                    Executive Chef
-                  </Typography>
-                </Grid>
-                <Grid item md={4} xs={6}>
-                  <img
-                    src='/images/chef2.jpg'
-                    alt='sbsteakhousechef'
-                    className={classes.chefImgs}
-                  />
-
-                  <Typography variant='h5' className={classes.chefTypo1}>
-                    <span className={classes.chefTypo1Span}>Chef.</span> Suat
-                    Bayrak
-                  </Typography>
-                  <Typography variant='subtitle2' className={classes.chefTypo2}>
-                    Executive Chef
-                  </Typography>
-                </Grid>
-                <Grid item md={4} xs={6}>
-                  <img
-                    src='/images/chef3.jpg'
-                    alt='sbsteakhousechef'
-                    className={classes.chefImgs}
-                  />
-
-                  <Typography variant='h5' className={classes.chefTypo1}>
-                    <span className={classes.chefTypo1Span}>Chef.</span> Suat
-                    Bayrak
-                  </Typography>
-                  <Typography variant='subtitle2' className={classes.chefTypo2}>
-                    Executive Chef
-                  </Typography>
-                </Grid>
-              </Grid>
+          <Grid item md={12} className={classes.gridContainerBottom}>
+            <Grid item md={12} xs={12}>
+              <img
+                src='/images/wave3.svg'
+                alt='sbsteakhouse'
+                style={{
+                  backgroundColor: '#333',
+                }}
+              />
             </Grid>
-          </Container>
+            <Container maxWidth='lg'>
+              <Grid container>
+                <Grid
+                  item
+                  md={12}
+                  className={classes.gridItemBottomTitle}
+                  xs={12}
+                >
+                  <Fade bottom>
+                    <Typography variant='h3' className={classes.Typo5}>
+                      <span className={classes.typoSpan}>Our</span> Chef Team
+                    </Typography>
+                  </Fade>
+                </Grid>
+                <Grid container item md={12} spacing={3}>
+                  <Grid item md={4} xs={6}>
+                    <img
+                      src='/images/chef1.jpg'
+                      alt='sbsteakhousechef'
+                      className={classes.chefImgs}
+                    />
+
+                    <Typography variant='h5' className={classes.chefTypo1}>
+                      <span className={classes.chefTypo1Span}>Chef.</span> Suat
+                      Bayrak
+                    </Typography>
+                    <Typography
+                      variant='subtitle2'
+                      className={classes.chefTypo2}
+                    >
+                      Executive Chef
+                    </Typography>
+                  </Grid>
+                  <Grid item md={4} xs={6}>
+                    <img
+                      src='/images/chef2.jpg'
+                      alt='sbsteakhousechef'
+                      className={classes.chefImgs}
+                    />
+
+                    <Typography variant='h5' className={classes.chefTypo1}>
+                      <span className={classes.chefTypo1Span}>Chef.</span> Suat
+                      Bayrak
+                    </Typography>
+                    <Typography
+                      variant='subtitle2'
+                      className={classes.chefTypo2}
+                    >
+                      Executive Chef
+                    </Typography>
+                  </Grid>
+                  <Grid item md={4} xs={6}>
+                    <img
+                      src='/images/chef3.jpg'
+                      alt='sbsteakhousechef'
+                      className={classes.chefImgs}
+                    />
+
+                    <Typography variant='h5' className={classes.chefTypo1}>
+                      <span className={classes.chefTypo1Span}>Chef.</span> Suat
+                      Bayrak
+                    </Typography>
+                    <Typography
+                      variant='subtitle2'
+                      className={classes.chefTypo2}
+                    >
+                      Executive Chef
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Container>
+          </Grid>
+          <Grid item md={12} xs={12}>
+            <img src='/images/wave2.svg' alt='sbsteakhouse' />
+          </Grid>
         </Grid>
-        <Grid item md={12} xs={12}>
-          <img src='/images/wave2.svg' alt='sbsteakhouse' />
-        </Grid>
-      </Grid>
-    </Box>
+      </Box>
+    </Fragment>
   );
 };
 

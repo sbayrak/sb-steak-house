@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Container, Grid, Typography } from '@material-ui/core';
 import PageHeader from '../layout/PageHeader';
 import Fade from 'react-reveal';
+import MetaHelmet from '../utils/MetaHelmet';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -57,94 +58,97 @@ const useStyles = makeStyles((theme) => ({
 const Gallery = () => {
   const classes = useStyles();
   return (
-    <Box component='div'>
-      <PageHeader title1={'GALLERY'}></PageHeader>
-      <Container className={classes.container}>
-        <Grid container>
-          <Grid container item md={12}>
-            <Typography variant='h2' className={classes.Typo1}>
-              Our Gallery
-            </Typography>
-            <img
-              src='/images/waveGallery6.svg'
-              alt='sbsteakhouse'
-              style={{ background: 'transparent' }}
-            />
+    <Fragment>
+      <MetaHelmet title='BAYRAK Steakhouse | Gallery'></MetaHelmet>
+      <Box component='div'>
+        <PageHeader title1={'GALLERY'}></PageHeader>
+        <Container className={classes.container}>
+          <Grid container>
+            <Grid container item md={12}>
+              <Typography variant='h2' className={classes.Typo1}>
+                Our Gallery
+              </Typography>
+              <img
+                src='/images/waveGallery6.svg'
+                alt='sbsteakhouse'
+                style={{ background: 'transparent' }}
+              />
+            </Grid>
           </Grid>
-        </Grid>
-        <Grid container className={classes.gridContainer}>
-          <Grid container item md={12} className={classes.gridItem}>
-            <Fade top>
-              <Grid item md={12} className={classes.gridImgItem}>
-                <img
-                  src='/images/welcomer1x550x550.jpg'
-                  alt='sbsteakhouse'
-                  style={{ width: '100%' }}
-                  className={classes.imgs}
-                />
-              </Grid>
+          <Grid container className={classes.gridContainer}>
+            <Grid container item md={12} className={classes.gridItem}>
+              <Fade top>
+                <Grid item md={12} className={classes.gridImgItem}>
+                  <img
+                    src='/images/welcomer1x550x550.jpg'
+                    alt='sbsteakhouse'
+                    style={{ width: '100%' }}
+                    className={classes.imgs}
+                  />
+                </Grid>
 
-              <Grid item md={12} className={classes.gridImgItem}>
+                <Grid item md={12} className={classes.gridImgItem}>
+                  <img
+                    src='/images/welcomer2x550x550.jpg'
+                    alt='sbsteakhouse'
+                    style={{ width: '100%' }}
+                    className={classes.imgs}
+                  />
+                </Grid>
+              </Fade>
+            </Grid>
+            <Grid container item md={12}>
+              <Fade left>
+                <Grid item md={12} className={classes.gridImgItem}>
+                  <img
+                    src='/images/welcomer3xlong.jpg'
+                    alt='sbsteakhouse'
+                    className={classes.imgs}
+                  />
+                </Grid>
+              </Fade>
+            </Grid>
+            <Grid container item md={12}>
+              <Grid item md={6} className={classes.gridImgItem}>
                 <img
-                  src='/images/welcomer2x550x550.jpg'
+                  src='/images/steak6.jpg'
                   alt='sbsteakhouse'
                   style={{ width: '100%' }}
                   className={classes.imgs}
                 />
               </Grid>
-            </Fade>
-          </Grid>
-          <Grid container item md={12}>
-            <Fade left>
-              <Grid item md={12} className={classes.gridImgItem}>
+              <Grid item md={6} className={classes.gridImgItem}>
                 <img
-                  src='/images/welcomer3xlong.jpg'
+                  src='/images/steak7.jpg'
                   alt='sbsteakhouse'
+                  style={{ width: '100%' }}
                   className={classes.imgs}
                 />
               </Grid>
-            </Fade>
-          </Grid>
-          <Grid container item md={12}>
-            <Grid item md={6} className={classes.gridImgItem}>
-              <img
-                src='/images/steak6.jpg'
-                alt='sbsteakhouse'
-                style={{ width: '100%' }}
-                className={classes.imgs}
-              />
-            </Grid>
-            <Grid item md={6} className={classes.gridImgItem}>
-              <img
-                src='/images/steak7.jpg'
-                alt='sbsteakhouse'
-                style={{ width: '100%' }}
-                className={classes.imgs}
-              />
             </Grid>
           </Grid>
-        </Grid>
-        <Grid container>
-          <Grid container item md={12}>
-            <img
-              src='/images/waveGallery7.svg'
-              alt='sbsteakhouse'
-              style={{ background: 'transparent' }}
-            />
-            <Typography variant='h4' className={classes.Typo1}>
-              <a
-                href='/reservation'
-                target='_blank'
-                rel='noreferrer noopener'
-                className={classes.reservation}
-              >
-                Reservation
-              </a>
-            </Typography>
+          <Grid container>
+            <Grid container item md={12}>
+              <img
+                src='/images/waveGallery7.svg'
+                alt='sbsteakhouse'
+                style={{ background: 'transparent' }}
+              />
+              <Typography variant='h4' className={classes.Typo1}>
+                <a
+                  href='/reservation'
+                  target='_blank'
+                  rel='noreferrer noopener'
+                  className={classes.reservation}
+                >
+                  Reservation
+                </a>
+              </Typography>
+            </Grid>
           </Grid>
-        </Grid>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+    </Fragment>
   );
 };
 
