@@ -85,6 +85,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.grey[900],
     padding: theme.spacing(5),
     marginBottom: theme.spacing(5),
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(1),
+    },
   },
   gridRootContainer: {},
   gridContainerLeftAndRight: {
@@ -180,6 +183,34 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '16px',
     [theme.breakpoints.down('xs')]: {
       fontSize: '12px',
+    },
+  },
+  gridContainer: {
+    backgroundColor: theme.palette.grey[900],
+    padding: theme.spacing(3),
+    [theme.breakpoints.down('xs')]: {
+      padding: theme.spacing(1),
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '90%',
+    },
+  },
+  gridImgItem: {
+    padding: theme.spacing(2),
+    [theme.breakpoints.down('xs')]: {
+      padding: theme.spacing(1),
+    },
+  },
+  imgs: {
+    boxShadow: theme.shadows[10],
+    transition: '0.5s ease',
+    '&:hover': {
+      transform: 'scale(0.99)',
+    },
+  },
+  imgsTop: {
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
     },
   },
 }));
@@ -932,7 +963,49 @@ const Menu = () => {
               </Tabs>
             </AppBar>
           </Grid>
-          <Grid container item md={12}></Grid>
+          <Grid container className={classes.gridContainer}>
+            <Grid container item md={12} className={classes.gridItem} xs={12}>
+              <Grid item md={6} className={classes.gridImgItem} xs={12}>
+                <img
+                  src='/images/welcomer1x550x550.jpg'
+                  alt='sbsteakhouse'
+                  className={`${classes.imgs} ${classes.imgsTop}`}
+                />
+              </Grid>
+              <Grid item md={6} className={classes.gridImgItem} xs={12}>
+                <img
+                  src='/images/welcomer2x550x550.jpg'
+                  alt='sbsteakhouse'
+                  className={`${classes.imgs} ${classes.imgsTop}`}
+                />
+              </Grid>
+            </Grid>
+            <Grid container item md={12}>
+              <Grid item md={12} className={classes.gridImgItem}>
+                <img
+                  src='/images/welcomer3xlong.jpg'
+                  alt='sbsteakhouse'
+                  className={`${classes.imgs} ${classes.imgsTop}`}
+                />
+              </Grid>
+            </Grid>
+            <Grid container item md={12}>
+              <Grid item md={6} className={classes.gridImgItem}>
+                <img
+                  src='/images/steak6.jpg'
+                  alt='sbsteakhouse'
+                  className={`${classes.imgs} ${classes.imgsTop}`}
+                />
+              </Grid>
+              <Grid item md={6} className={classes.gridImgItem}>
+                <img
+                  src='/images/steak7.jpg'
+                  alt='sbsteakhouse'
+                  className={`${classes.imgs} ${classes.imgsTop}`}
+                />
+              </Grid>
+            </Grid>
+          </Grid>
         </Grid>
       </Container>
     </Box>
