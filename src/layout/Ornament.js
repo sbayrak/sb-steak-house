@@ -7,7 +7,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: theme.spacing(15),
+    marginTop: theme.spacing(20),
+    marginBottom: theme.spacing(20),
   },
   ornament: {
     width: '400px',
