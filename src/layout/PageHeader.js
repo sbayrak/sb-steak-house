@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Grid, Box, Container, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import restaurant1 from '../images/restaurant1.png';
+import steak5 from '../images/steak5.png';
 
 const useStyles = makeStyles((theme) => ({
   gridItemTop: {
@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   aboutWelcomer: {
     height: '50vh',
     width: '100%',
-    backgroundImage: `url('${restaurant1}')`,
+    backgroundImage: `url('${steak5}')`,
     backgroundAttachment: 'fixed',
     backgroundPosition: 'bottom',
     backgroundRepeat: 'no-repeat',
@@ -55,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
 
 const PageHeader = ({ title1, title2 }) => {
   const classes = useStyles();
+
   return (
     <Grid container>
       <Grid item md={12} className={classes.gridItemTop}>
