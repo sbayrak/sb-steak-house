@@ -282,6 +282,10 @@ const Reservation = () => {
                 containerElement={<div style={{ height: `400px` }} />}
                 mapElement={<div style={{ height: `100%` }} />}
               />
+              <Typography variant='body2'>
+                * NOTE: Google maps will be added after you accept the price
+                offer.
+              </Typography>
             </Grid>
           </Grid>
         </Container>
