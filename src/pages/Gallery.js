@@ -141,7 +141,6 @@ const Gallery = () => {
               <Typography variant='h4' className={classes.Typo1}>
                 <a
                   href='/reservation'
-                  target='_blank'
                   rel='noreferrer noopener'
                   className={classes.reservation}
                 >
