@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Pirata One',
     letterSpacing: 3,
     [theme.breakpoints.down('xs')]: {
-      fontSize: theme.spacing(5),
+      fontSize: theme.spacing(3),
     },
   },
   typoSpan: {
@@ -179,6 +179,10 @@ const useStyles = makeStyles((theme) => ({
   tab: {
     padding: '25px',
     fontSize: '18px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '12px',
+      padding: '20px',
+    },
   },
 }));
 

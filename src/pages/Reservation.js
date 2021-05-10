@@ -141,7 +141,7 @@ const Reservation = () => {
                   </Typography>
                 </Grid>
               </Fade>
-              <Grid item md={12} className={classes.gridItemLeftItems}>
+              <Grid item md={12} className={classes.gridItemLeftItems} xs={12}>
                 <Fade bottom>
                   <Typography
                     variant='h5'
@@ -282,7 +282,7 @@ const Reservation = () => {
                 containerElement={<div style={{ height: `400px` }} />}
                 mapElement={<div style={{ height: `100%` }} />}
               />
-              <Typography variant='body2'>
+              <Typography variant='body2' style={{ color: '#fff' }}>
                 * NOTE: Google maps will be added after you accept the price
                 offer.
               </Typography>

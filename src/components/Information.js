@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Pirata One',
     letterSpacing: 1,
     [theme.breakpoints.down('sm')]: {
-      fontSize: '18px',
+      fontSize: '16px',
     },
   },
   btn: {
@@ -62,6 +62,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       marginRight: theme.spacing(0),
       padding: 0,
+      fontSize: '12px',
     },
   },
   btnLink: {
@@ -110,7 +111,8 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(2),
     borderBottom: '1px solid rgba(255,60,60,0.5)',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '30px',
+      fontSize: '25px',
+      paddingBottom: theme.spacing(1),
     },
   },
   typoTime: {
@@ -118,7 +120,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Pirata One',
     letterSpacing: 4,
     [theme.breakpoints.down('sm')]: {
-      fontSize: '18px',
+      fontSize: '16px',
     },
   },
   typoNumber: {
@@ -133,7 +135,7 @@ const useStyles = makeStyles((theme) => ({
       border: '2px solid #ff1c1c',
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '20px',
+      fontSize: '18px',
     },
   },
 }));

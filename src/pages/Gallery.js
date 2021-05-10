@@ -50,8 +50,14 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: '#333',
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '25px',
+      fontSize: '20px',
+      padding: theme.spacing(1.5),
+      paddingLeft: theme.spacing(2),
+      paddingRight: theme.spacing(2),
     },
+  },
+  imglong: {
+    width: '100%',
   },
 }));
 
@@ -98,15 +104,13 @@ const Gallery = () => {
               </Fade>
             </Grid>
             <Grid container item md={12}>
-              <Fade left>
-                <Grid item md={12} className={classes.gridImgItem}>
-                  <img
-                    src='/images/welcomer3xlong.jpg'
-                    alt='sbsteakhouse'
-                    className={classes.imgs}
-                  />
-                </Grid>
-              </Fade>
+              <Grid item md={12} className={classes.gridImgItem}>
+                <img
+                  src='/images/welcomer3xlong.jpg'
+                  alt='sbsteakhouse'
+                  className={`${classes.imgs} ${classes.imglong}`}
+                />
+              </Grid>
             </Grid>
             <Grid container item md={12}>
               <Grid item md={6} className={classes.gridImgItem}>

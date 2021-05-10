@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
   },
   ornament: {
     width: '400px',
+    [theme.breakpoints.down('xs')]: {
+      width: '200px',
+    },
   },
 }));
 

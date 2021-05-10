@@ -99,11 +99,17 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.grey[200],
     paddingRight: theme.spacing(1),
     paddingLeft: theme.spacing(1),
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '12px',
+    },
   },
   Typo2: {
     color: theme.palette.grey[100],
     fontFamily: 'Pirata One',
     letterSpacing: 4,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '30px',
+    },
   },
   typo2Span: {
     color: '#ff3c3c',

@@ -3,6 +3,7 @@ import Carousel from 'react-material-ui-carousel';
 import { Button, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Fade from 'react-reveal/Fade';
+import { useState } from 'react';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
       width: '175px',
     },
     [theme.breakpoints.down('xs')]: {
-      width: '165px',
+      width: '100px',
     },
   },
   Typo: {
@@ -51,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '60px',
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '30px',
+      fontSize: '20px',
     },
   },
   Typo2: {
@@ -64,7 +65,9 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '16px',
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '13px',
+      fontSize: '12px',
+      width: '60%',
+      margin: '0 auto',
     },
   },
   btn: {
@@ -78,6 +81,13 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '5px',
     '&:hover': {
       border: `1px solid ${theme.palette.grey[200]}`,
+    },
+  },
+  img: {
+    height: '100vh',
+    width: '100%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100em',
     },
   },
 }));
@@ -108,7 +118,12 @@ function Landing(props) {
   ];
 
   return (
-    <Carousel interval='4000' indicators='true' navButtonsAlwaysVisible='true'>
+    <Carousel
+      interval='4000'
+      indicators='true'
+      navButtonsAlwaysVisible='true'
+      timeout={{ appear: 0, enter: 0, exit: 0 }}
+    >
       {items.map((item, i) => (
         <Item key={i} item={item} />
       ))}
@@ -118,9 +133,19 @@ function Landing(props) {
 
 function Item({ item }) {
   const classes = useStyles();
+  const [loading, setLoading] = useState(false);
+
+  const style = loading ? {} : { visibility: 'hidden' };
+
   return (
     <div className={classes.root}>
-      <img src={item.img} alt={item.img}></img>
+      <img
+        src={item.img}
+        alt={item.img}
+        className={classes.img}
+        style={style}
+        onLoad={() => setLoading(true)}
+      ></img>
 
       <Grid container className={classes.gridContainer}>
         <Fade top>
