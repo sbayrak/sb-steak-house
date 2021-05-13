@@ -15,8 +15,8 @@ const MetaHelmet = ({ content, title }) => {
           content ? content : 'BAYRAK Steakhouse and Burger'
         }`}
       />
-      <meta name='robots' content='noindex, nofollow' />
-      <meta name='googlebot' content='noindex, nofollow' />
+      <meta name='robots' />
+      <meta name='googlebot' />
       {/* <meta name='canonical' href='https://'/> */}
       <meta
         name='keywords'
